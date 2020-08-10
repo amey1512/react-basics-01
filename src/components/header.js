@@ -17,19 +17,9 @@ const Header = () => {
 
 class Header extends React.Component {
   render(){
-    const styles = {
-      header: {
-        background:'red'
-      },
-      logo:{
-        color:'#c69fc4',
-        textAlign:'center'
-      }
-    }
-
     return(
-      <header style={styles.header}>
-        <div style={styles.logo}>LOGO</div>
+      <header>
+        <div className="logo">LOGO</div>
         <input type="text"/>
       </header>
     )
