@@ -16,11 +16,18 @@ const Header = () => {
 */
 
 class Header extends React.Component {
+
+  myEventCall(e){
+    console.log(e.target.value);
+    console.log("HEY");
+  }
+
   render(){
     return(
       <header>
         <div className="logo">LOGO</div>
-        <input type="text"/>
+        <input  type="text"
+                onChange={(e)=>this.myEventCall(e)}/>
       </header>
     )
   }
