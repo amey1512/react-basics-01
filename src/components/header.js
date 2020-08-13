@@ -17,9 +17,14 @@ const Header = () => {
 
 class Header extends React.Component {
 
-  myEventCall(e){
-    console.log(e.target.value);
-    console.log("HEY");
+  state = {
+    cities:"Indore"
+  }
+
+  myEventCall = (event) => {
+    this.setState({
+      cities: event.target.value
+    });
   }
 
   render(){
@@ -27,7 +32,11 @@ class Header extends React.Component {
       <header>
         <div className="logo">LOGO</div>
         <input  type="text"
-                onChange={(e)=>this.myEventCall(e)}/>
+                onChange={(e) => this.myEventCall(e)}/>
+        <div>
+          <h2>Cities Affecting</h2>
+          <p>{this.state.cities}</p>
+        </div>
       </header>
     )
   }
