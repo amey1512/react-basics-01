@@ -30,7 +30,7 @@ class Header extends React.Component {
   render(){
     return(
       <header>
-        <div className="logo">LOGO</div>
+        <div className="logo">NOVEL CORONA VIRUS INFORMATION BUREAU.</div>
         <input  type="text"
                 onChange={(e) => this.myEventCall(e)}/>
         <div>
