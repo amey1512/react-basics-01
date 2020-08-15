@@ -18,41 +18,41 @@ const Header = () => {
 class Header extends React.Component {
 
   state = {
-    cities:"",
-    active:false
+    cities:""
+    //active:false
   }
 
   myEventCall = (event) => {
-    const value = event.target.value === '' ? false:true;
+    //const value = event.target.value === '' ? false:true;
     this.setState({
-      active:value,
+      //active:value,
       cities: event.target.value
     });
   }
 
   render(){
     
-    const style = {
-      background : "black",
-      color:"red"
-    }
+    // const style = {
+    //   background : "black",
+    //   color:"red"
+    // }
     
-    if(this.state.cities !== ''){
-      style.background="red";
-      style.color="black";
-    }
-    else{
-      style.background="black";
-      style.color="red";
-    }
+    // if(this.state.cities !== ''){
+    //   style.background="red";
+    //   style.color="black";
+    // }
+    // else{
+    //   style.background="black";
+    //   style.color="red";
+    // }
 
     return(                         
-      <header style = {{background:`${this.state.active ? "black" : "red"}`}}>
+      <header>
         <div className="logo">NOVEL CORONA VIRUS INFORMATION BUREAU.</div>
         <input  type="text"
                 onChange={(e) => this.myEventCall(e)}/>
         <div>
-          <h2>Cities Affecting</h2>
+          <h2>Vaccine is out from Russia.</h2>
           <h2>{this.state.cities}</h2>
         </div>
       </header>
